@@ -66,8 +66,7 @@ def labelling(x):
     df[x] = LabelEncoder().fit_transform(df[x])
     return df
 
-cat = ['yummy', 'convenient', 'spicy', 'fattening', 'greasy', 'fast', 'cheap',
-       'tasty', 'expensive', 'healthy', 'disgusting']
+cat = ['yummy','convenient','spicy','fattening','greasy','fast','cheap','tasty','expensive','healthy','disgusting']
 
 for i in cat:
     labelling(i)
@@ -327,8 +326,7 @@ cluster.screeplot(obj=[pc_list, pca.explained_variance_ratio_],show=True,dim=(10
 
 
 pca_scores = PCA().fit_transform(X)
-cluster.biplot(cscore=pca_scores, loadings=loadings, labels=df.columns.values, var1=round(pca.explained_variance_ratio_[0]*100, 2),
-    var2=round(pca.explained_variance_ratio_[1]*100, 2),show=True,dim=(10,5))
+cluster.biplot(cscore=pca_scores, loadings=loadings, labels=df.columns.values, var1=round(pca.explained_variance_ratio_[0]*100, 2),var2=round(pca.explained_variance_ratio_[1]*100, 2),show=True,dim=(10,5))
 
 
 # In[38]:
@@ -439,8 +437,7 @@ segment
 
 plt.figure(figsize = (9,4))
 sns.scatterplot(x = "VisitFrequency", y = "Like",data=segment,s=400, color="orange")
-plt.title("Simple segment evaluation plot for the fast food data set",
-          fontsize = 15)
+plt.title("Simple segment evaluation plot for the fast food data set",fontsize = 15)
 plt.xlabel("Visit", fontsize = 12)
 plt.ylabel("Like", fontsize = 12)
 plt.show()
